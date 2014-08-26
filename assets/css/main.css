@@ -102,6 +102,7 @@ a:after {
 	height: 42px;
 	font-size: 18px;
 	width: 280px;
+    vertical-align: left;
 }
 
 i {
