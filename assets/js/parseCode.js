@@ -7,54 +7,31 @@ var jobs = new Jobs();
 function jobFields() 
 {
 	//parse columns set to text input
-    var jobType = document.getElementById('jobType');
-	var jobName = document.getElementById('jobDescription');
-	var jobPay = document.getElementById('jobPay');
-	var jobTime = document.getElementById('jobTime');
-	var jobDate = document.getElementById('jobDate');
+    var jobType = document.getElementById('jobType').value;
+	var jobDescription = document.getElementById('jobDescription').value;
+	var jobPay = document.getElementById('jobPay').value;
+	var jobTime = document.getElementById('jobTime').value;
+	var jobDate = document.getElementById('jobDate').value;
 	
 	jobs.set("type", jobType);
     jobs.set("name", jobDescription);
-	jobs.set("pay", pay);
-	jobs.set("date", jobDate);
+	jobs.set("pay", jobPay);
+	jobs.set("Date", jobDate);
 	jobs.set("time", jobTime);
+	//jobs.set("company", 
 	
     //Pushes to parse
     jobs.save(null, {
     	success: function(jobs) 
     	{
-    		alert("New job saved sucessfully:" + "\n Job Type: " + jobType + " \n Name: " + jobName +" \n Company: " + jobCompany);
+    		alert("New job saved sucessfully");
 			window.location.assign('congratz.html');
     	},
     	error: function(jobs, error) 
     	{
     		alert('Failed to save job ' + error.message);
     	}
-    });
-
-    /* this.jobQuery = function()
-    {
-    	var query = new Parse.Query(Jobs);
-    	query.find({
-    		success: function(results)
-    		{
-    			alert("Successfully retrieved " + results.length + " jobs.");
-    			for (var i = 0; i < results.length; i++) 
-    			{
-    				var listJob = results[i];
-    				alert(listJob.id + ' - ' + listJob.get('company'));
-    			}	
-    		},
-
-    		error: function(error)
-    		{
-    			alert("Error: " + error.code + " " + error.message);
-    		}
-    	});
-
-    	alert("CAN QUERY!!");
-    }
-    jobQuery(); */
+    })
 }
 
 //Parse business object
