@@ -9,14 +9,14 @@ function jobFields()
 	//parse columns set to text input
     var jobType = document.getElementById('jobType').value;
 	var jobDescription = document.getElementById('jobDescription').value;
-	var jobPay = document.getElementById('jobPay').value;
+	var jobPay = parseInt(document.getElementById('jobPay').value);
 	var jobTime = document.getElementById('jobTime').value;
 	var jobDate = document.getElementById('jobDate').value;
 	
 	jobs.set("type", jobType);
     jobs.set("name", jobDescription);
 	jobs.set("pay", jobPay);
-	jobs.set("Date", jobDate);
+	jobs.set("date", jobDate);
 	jobs.set("time", jobTime);
 	//jobs.set("company", 
 	
@@ -24,12 +24,12 @@ function jobFields()
     jobs.save(null, {
     	success: function(jobs) 
     	{
-    		alert("New job saved sucessfully");
+    		alert("New job saved successfully");
 			window.location.assign('congratz.html');
     	},
     	error: function(jobs, error) 
     	{
-    		alert('Failed to save job ' + error.message);
+    		alert('Failed to save job: ' + error.message);
     	}
     })
 }
