@@ -10,6 +10,7 @@ function jobFields()
     jobs.set("type", jobType);
     jobs.set("name", jobName);
     jobs.set("company", jobCompany);
+	jobs.set("pay", pay);
 
     //Pushes to parse
     jobs.save(null, {
@@ -23,7 +24,7 @@ function jobFields()
     	}
     });
 
-    this.jobQuery = function()
+    /* this.jobQuery = function()
     {
     	var query = new Parse.Query(Jobs);
     	query.find({
@@ -45,7 +46,7 @@ function jobFields()
 
     	alert("CAN QUERY!!");
     }
-    jobQuery();
+    jobQuery(); */
 }
 
 //Parse business object

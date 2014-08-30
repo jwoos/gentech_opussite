@@ -47,38 +47,32 @@
       <div class="row">
         <div class="col-lg-6">
           <h1 style="font-family:Roboto; text-align:center">Please fill out the form</h1>
-          
-         <br><br>
-    <h4 style="color:white">Enter your business name</h4>
-    <div class="input-group input group-lg">
-    <span class="input-group-addon"></span>
-    <input type="text" class="form-control" placeholder="Email">
-  </div>
 
     <br><br>
-    <h4 style="color:white">Enter job address</h4>
-    <div class="input-group input group-lg">
-    <span class="input-group-addon"></span>
-    <input type="password" class="form-control" placeholder="Password">
-  </div>       
+    
+	<h4 style="color:white">Enter job type</h4>
+		<div class="input-group input group-lg">
+			<span class="input-group-addon"></span>
+			<input type="text" class="form-control" placeholder="Password" id='jobType'>
+		</div>       
 
     <br><br>
     <h4 style="color:white">Pay per hour</h4>
     <div class="input-group input group-lg">
     <span class="input-group-addon"></span>
-    <input type="text" class="form-control" placeholder="$">
+    <input type="text" class="form-control" placeholder="$" id='pay'>
   </div>
 
     <br><br>
-    <h4 style="color:white">Type of job</h4>
+    <h4 style="color:white">Job description</h4>
     <div class="input-group input group-lg">
     <span class="input-group-addon"></span>
-    <input type="text" class="form-control" placeholder="Job type">
+    <input type="text" class="form-control" placeholder="Job description" id='description'>
   </div>
   <br>
   <br>
             <a href="congratz.html">
-            <input value="Submit" type="submit" class="btn btn-success btn-lg" style="float:center">
+            <input value="Submit" type="submit" class="btn btn-success btn-lg" style="float:center" onclick='jobFields();'>
           </a>
         </div>
         <br><br><br><br><br><br><br><br>
