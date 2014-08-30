@@ -7,16 +7,24 @@ var jobs = new Jobs();
 function jobFields() 
 {
 	//parse columns set to text input
-    jobs.set("type", jobType);
-    jobs.set("name", jobName);
-    jobs.set("company", jobCompany);
+    var jobType = document.getElementById('jobType');
+	var jobName = document.getElementById('jobDescription');
+	var jobPay = document.getElementById('jobPay');
+	var jobTime = document.getElementById('jobTime');
+	var jobDate = document.getElementById('jobDate');
+	
+	jobs.set("type", jobType);
+    jobs.set("name", jobDescription);
 	jobs.set("pay", pay);
-
+	jobs.set("date", jobDate);
+	jobs.set("time", jobTime);
+	
     //Pushes to parse
     jobs.save(null, {
     	success: function(jobs) 
     	{
     		alert("New job saved sucessfully:" + "\n Job Type: " + jobType + " \n Name: " + jobName +" \n Company: " + jobCompany);
+			window.location.assign('congratz.html');
     	},
     	error: function(jobs, error) 
     	{

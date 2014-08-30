@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
 
-    <title>Login OPUS</title>
-
+    <title>OPUS</title>
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="assets/js/parse.js"></script>
+	<script src="assets/js/parseCode.js"></script>
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
-   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
     <script src="assets/js/bootstrap.min.js"></script>
 
     
@@ -49,34 +50,51 @@
           <h1 style="font-family:Roboto; text-align:center">Please fill out the form</h1>
 
     <br><br>
-    
 	<h4 style="color:white">Enter job type</h4>
 		<div class="input-group input group-lg">
 			<span class="input-group-addon"></span>
-			<input type="text" class="form-control" placeholder="Password" id='jobType'>
+			<input type="text" class="form-control" placeholder="Job type" id='jobType'>
 		</div>       
 
     <br><br>
     <h4 style="color:white">Pay per hour</h4>
     <div class="input-group input group-lg">
     <span class="input-group-addon"></span>
-    <input type="text" class="form-control" placeholder="$" id='pay'>
+    <input type="number" class="form-control" placeholder="$" id='jobPay'>
   </div>
 
+  <br><br>
+	<h4 style="color:white">Enter job date</h4>
+		<div class="input-group input group-lg">
+			<span class="input-group-addon"></span>
+			<input type="date" class="form-control" placeholder="Job date" id='jobDate'>
+		</div>
+  
+   <br><br>
+	<h4 style="color:white">Enter job time</h4>
+		<div class="input-group input group-lg">
+			<span class="input-group-addon"></span>
+			<input type="time" class="form-control" placeholder="Job time" id='jobTime'>
+		</div>
+
+  
     <br><br>
     <h4 style="color:white">Job description</h4>
-    <div class="input-group input group-lg">
-    <span class="input-group-addon"></span>
-    <input type="text" class="form-control" placeholder="Job description" id='description'>
-  </div>
-  <br>
-  <br>
-            <a href="congratz.html">
-            <input value="Submit" type="submit" class="btn btn-success btn-lg" style="float:center" onclick='jobFields();'>
-          </a>
-        </div>
-        <br><br><br><br><br><br><br><br>
-        <div class="col-lg-6">
+		<div class="input-group input group-lg">
+		<span class="input-group-addon"></span>
+		<input type="text" class="form-control" placeholder="Job description" id='jobDescription'>
+	</div>
+	
+	<br><br>
+        
+	<a>
+		<input value="Submit" type="submit" class="btn btn-success btn-lg" style="float:center" onclick='jobFields();'>
+    </a>
+</div>
+        
+	<br><br><br><br><br><br><br><br>
+        
+		<div class="col-lg-6">
           <img class="img-responsive" src="assets/img/bis.png" alt="">
           <div id="headerwrap">
           </div>
