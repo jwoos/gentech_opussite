@@ -85,7 +85,7 @@ function logIn()
 
     Parse.Business.logIn(email, password, {
       success: function(business) {
-        window.location.assign('studentprofile.html');
+        window.location.assign('home.html');
         gloEmail = 'Global Test';
          // Do stuff after successful login.
         },
