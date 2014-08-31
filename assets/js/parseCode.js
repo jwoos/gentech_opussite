@@ -12,13 +12,15 @@ function jobFields()
 	var jobPay = parseInt(document.getElementById('jobPay').value);
 	var jobTime = document.getElementById('jobTime').value;
 	var jobDate = document.getElementById('jobDate').value;
+	var jobCompany = document.getElementById('company').value;
 	
 	jobs.set("type", jobType);
     jobs.set("name", jobDescription);
 	jobs.set("pay", jobPay);
 	jobs.set("date", jobDate);
 	jobs.set("time", jobTime);
-	//jobs.set("company", 
+	jobs.set("company", jobCompany);
+	jobs.set("Apply", "#"); 
 	
     //Pushes to parse
     jobs.save(null, {
